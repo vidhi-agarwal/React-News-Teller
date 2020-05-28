@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import news from './images/news.png';
+import Select from './components/select';
 import './App.css';
+import Footer from './components/footer';
+import Timer from './components/timer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='app'>
+			<div className='appHeader'>
+				<img className='appLogo' src={news} alt='News Logo' />
+
+				<div className='title'>
+					<h1>News Avenue</h1>
+				</div>
+
+				<div className='timerDisplay'>
+					<Timer />
+				</div>
+			</div>
+			<h1>Select your desired country!</h1>
+			<Select />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
